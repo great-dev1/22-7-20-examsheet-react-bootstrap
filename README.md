@@ -10,7 +10,7 @@ This app was built with:\
 ### Functionalities
 
 This app has the following functionalities:\
-●	Display a table which contains three fields: "Student Name", "Score" and "Class"(A, B or C)\
+●	Display a table which contains three fields: "Student Name", "Score" and "Class"\
 ●	Create a record to the table\
 ●	Filter records by score and class\
 ●	Delete a record from the table\
