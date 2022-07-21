@@ -2,18 +2,18 @@
 
 ### Tech Stack
 
-This app was built with:
-●	[Create React App](https://github.com/facebook/create-react-app)
-●	[Bootstrap](https://getbootstrap.com/).
-●	[React localization](https://www.npmjs.com/package/react-localization).
+This app was built with:\
+●	[Create React App](https://github.com/facebook/create-react-app)\
+●	[Bootstrap](https://getbootstrap.com/)\
+●	[React localization](https://www.npmjs.com/package/react-localization)
 
 ### Functionalities
 
-This app has the following functionalities:
-●	Display a table which contains 3 fields: "Student Name", "Score" and "Class"(A/B/C)
-●	Create a record to the table
-●	Filter records by score and class
-●	Delete a record from the table
+This app has the following functionalities:\
+●	Display a table which contains three fields: "Student Name", "Score" and "Class"(A, B or C)\
+●	Create a record to the table\
+●	Filter records by score and class\
+●	Delete a record from the table\
 ●	Label translation
 
 ### Depolyed URL
