@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const FilterBox = ({ from, setFrom, to, setTo, classes, setClasses }) => {
+const FilterBox = ({ translations, from, setFrom, to, setTo, classes, setClasses }) => {
   const [scoreFrom, setScoreFrom] = useState(from)
   const [scoreTo, setScoreTo] = useState(to)
   const [classrooms, setclassrooms] = useState(classes)
@@ -33,7 +33,7 @@ const FilterBox = ({ from, setFrom, to, setTo, classes, setClasses }) => {
   return (
     <form className="my-3 p-3 border rounded" onSubmit={handleSubmit}>
       <div className="row mb-3">
-        <label className="col-md-4 col-form-label text-md-end" htmlFor="from" >Score From</label>
+        <label className="col-md-4 col-form-label text-md-end" htmlFor="from" >{translations.from}</label>
         <div className="col-md-8">
           <input
             className="form-control"
@@ -50,7 +50,7 @@ const FilterBox = ({ from, setFrom, to, setTo, classes, setClasses }) => {
       </div>
 
       <div className="row mb-3">
-        <label className="col-md-4 col-form-label text-md-end" htmlFor="to">To</label>
+        <label className="col-md-4 col-form-label text-md-end" htmlFor="to">{translations.to}</label>
         <div className="col-md-8">
           <input
             className="form-control"
@@ -67,7 +67,7 @@ const FilterBox = ({ from, setFrom, to, setTo, classes, setClasses }) => {
       </div>
 
       <div className="row mb-3">
-        <label className="col-md-4 col-form-label text-md-end pt-0">Class</label>
+        <label className="col-md-4 col-form-label text-md-end pt-0">{translations.class}</label>
         <div className="col-md-8">
           <div className="form-check">
             <input
@@ -112,7 +112,7 @@ const FilterBox = ({ from, setFrom, to, setTo, classes, setClasses }) => {
 
       <div className="row">
         <div className="col-md-8 offset-md-4">
-          <button className="btn btn-success" type="submit">Filter Record</button>
+          <button className="btn btn-success" type="submit">{translations.filter}</button>
         </div>
       </div>
     </form>

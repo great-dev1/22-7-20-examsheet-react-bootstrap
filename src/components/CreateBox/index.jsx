@@ -1,7 +1,7 @@
 import { useState } from "react"
 
-const CreateBox = ({ records, setRecords }) => {
-  const [name, setName] = useState("Student1")
+const CreateBox = ({ translations, records, setRecords }) => {
+  const [name, setName] = useState("")
   const [score, setScore] = useState(75)
   const [classroom, setClassroom] = useState("A")
 
@@ -26,7 +26,7 @@ const CreateBox = ({ records, setRecords }) => {
       alert("Please fill out student name and score.")
       isValid = false
     } else {
-      records.map((record) => {
+      records.forEach((record) => {
         if (record.name === name) {
           alert("The name is already registered. Please fill out another name.")
           isValid = false
@@ -50,7 +50,7 @@ const CreateBox = ({ records, setRecords }) => {
   return (
     <form className="my-3 p-3 border rounded" onSubmit={handleSubmit}>
       <div className="row mb-3">
-        <label className="col-md-4 col-form-label text-md-end" htmlFor="name" >Student Name</label>
+        <label className="col-md-4 col-form-label text-md-end" htmlFor="name" >{translations.name}</label>
         <div className="col-md-8">
           <input
             className="form-control"
@@ -65,7 +65,7 @@ const CreateBox = ({ records, setRecords }) => {
       </div>
 
       <div className="row mb-3">
-        <label className="col-md-4 col-form-label text-md-end" htmlFor="score">Score</label>
+        <label className="col-md-4 col-form-label text-md-end" htmlFor="score">{translations.score}</label>
         <div className="col-md-8">
           <input
             className="form-control"
@@ -82,7 +82,7 @@ const CreateBox = ({ records, setRecords }) => {
       </div>
 
       <div className="row mb-3">
-        <label className="col-md-4 col-form-label text-md-end pt-0">Class</label>
+        <label className="col-md-4 col-form-label text-md-end pt-0">{translations.class}</label>
         <div className="col-md-8">
           <div className="form-check">
             <input
@@ -127,7 +127,7 @@ const CreateBox = ({ records, setRecords }) => {
 
       <div className="row">
         <div className="col-md-8 offset-md-4">
-          <button className="btn btn-primary" type="submit">Create Record</button>
+          <button className="btn btn-primary" type="submit">{translations.create}</button>
         </div>
       </div>
     </form>

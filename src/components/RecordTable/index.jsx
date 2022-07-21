@@ -1,4 +1,4 @@
-function RecordTable({ records, setRecords, from, to, classes }) {
+function RecordTable({ translations, records, setRecords, from, to, classes }) {
   const deleteRecord = (e, name) => {
     if (window.confirm("Are you sure to delete this record?")) {
       setRecords(records.filter((record) => record.name !== name))
@@ -9,10 +9,10 @@ function RecordTable({ records, setRecords, from, to, classes }) {
     <table className="table table-striped table-hover mt-3">
       <thead>
         <tr>
-          <th>Student Name</th>
-          <th>Score</th>
-          <th>Class</th>
-          <th>Action</th>
+          <th>{translations.name}</th>
+          <th>{translations.score}</th>
+          <th>{translations.class}</th>
+          <th>{translations.function}</th>
         </tr>
       </thead>
 
@@ -27,7 +27,7 @@ function RecordTable({ records, setRecords, from, to, classes }) {
                   <td>{record.score}</td>
                   <td>{record.classroom}</td>
                   <td>
-                    <button className="btn btn-sm btn-danger" onClick={(e) => deleteRecord(e, name)}>Delete</button>
+                    <button className="btn btn-sm btn-danger" onClick={(e) => deleteRecord(e, name)}>{translations.delete}</button>
                   </td>
                 </tr>
               )
