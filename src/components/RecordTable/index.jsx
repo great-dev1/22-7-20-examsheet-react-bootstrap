@@ -1,4 +1,4 @@
-function RecordTable({ translations, records, setRecords, from, to, classes }) {
+const RecordTable = ({ translations, records, setRecords, from, to, classes }) => {
   const deleteRecord = (e, name) => {
     if (window.confirm("Are you sure to delete this record?")) {
       setRecords(records.filter((record) => record.name !== name))
